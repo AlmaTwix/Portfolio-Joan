@@ -143,6 +143,16 @@ nav {
     display: flex;
     align-items: center;
     margin-top: 100px;
+    animation: fade-in 1200ms 800ms backwards;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .about_me_img img {
@@ -171,7 +181,21 @@ nav {
     overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
     margin-bottom: 30px;
+    animation: animate_profil_picture 800ms 200ms backwards;
 }
+
+@keyframes animate_profil_picture {
+    0% {
+        transform: scale(0);
+    }
+    80% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 
 .about_me_picture_mask img {
     width: 100%;
@@ -184,13 +208,16 @@ nav {
     color: #31EC56;
 }
 
+
 .about_me_info_container p {
     font-size: 20px;
     margin-bottom: 30px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .about_me_info_title {
     margin-bottom: 30px;
+    animation: fade-up 650ms 400ms backwards;
 }
 
 .about_me_link {
@@ -198,6 +225,21 @@ nav {
     color: #242424;
     text-decoration: none;
     padding: 0 16px;
+}
+
+.about_me_links {
+    animation: fade-up 650ms 600ms backwards;
+}
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
@@ -373,7 +415,7 @@ footer {
 }
 
 .footer_row {
-    padding: 5% 0;
+    padding: 2% 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -466,6 +508,8 @@ footer {
     }
 }
 
-
-
-
+@media (max-width:385px) {
+    .personal_logo {
+        display: none;
+    }
+}
